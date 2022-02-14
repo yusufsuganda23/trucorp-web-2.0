@@ -1,5 +1,5 @@
 <?php
-	$conn = new mysqli("172.22.0.2", "root", "pass123", "Trucorp");
+	$conn = new mysqli("172.23.0.2", "root", "pass123", "Trucorp");
 	if($conn->connect_error){
 		echo "Tidak bisa connect mysql, silahkan coba lagi";
 		exit;

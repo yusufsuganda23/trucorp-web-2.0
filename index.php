@@ -1,5 +1,5 @@
 <?php
-	$conn = new mysqli("172.23.0.2", "root", "pass123", "Trucorp");
+	$conn = new mysqli("172.25.0.2", "root", "pass123", "Trucorp");
 	if($conn->connect_error){
 		echo "Tidak bisa connect mysql, silahkan coba lagi";
 		exit;
@@ -8,7 +8,7 @@
 	echo "<br>";
 	$sql = "SELECT * FROM users";
 	$result = $conn->query($sql);
-	$count = $result->num_rows();
+	$count = $result->num_rows;
 	echo "Total Users: ".$count." Users";
 //	if ($result->num_rows > 0) {
 //  	while($row = $result->fetch_assoc()) {

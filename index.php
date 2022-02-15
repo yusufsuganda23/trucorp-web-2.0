@@ -8,12 +8,14 @@
 	echo "<br>";
 	$sql = "SELECT * FROM users";
 	$result = $conn->query($sql);
-	if ($result->num_rows > 0) {
-  	while($row = $result->fetch_assoc()) {
-    	echo "ID: " . $row["ID"]. " Nama: " . $row["Nama"]. " Alamat: " . $row["Alamat"] . " 	Jabatan: " . $row["Jabatan"]. "<br>";
-  	}
-	} else {
-  	echo "0 results";
-	}
+	$count = $result->num_rows();
+	echo "Total Users: ".$count." Users";
+//	if ($result->num_rows > 0) {
+//  	while($row = $result->fetch_assoc()) {
+//    	echo "ID: " . $row["ID"]. " Nama: " . $row["Nama"]. " Alamat: " . $row["Alamat"] . " 	Jabatan: " . $row["Jabatan"]. "<br>";
+//  	}
+//	} else {
+// 	echo "0 results";
+//	}
 	$conn->close();
 ?>
